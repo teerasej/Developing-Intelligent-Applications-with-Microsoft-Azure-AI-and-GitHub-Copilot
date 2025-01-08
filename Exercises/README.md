@@ -1,7 +1,6 @@
 
 # Exercise
 
-## Day 1
 
 1. [Github Copilot](./1-github-copilot.md)
 2. [Azure App Service](./2-app-service.md)

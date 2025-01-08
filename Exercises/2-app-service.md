@@ -30,7 +30,7 @@ Sign in to your Azure portal using the credentials provided.
    
    #### Task 1: Test the Web API
 
-   1. In the Microsoft Edge's browser window, open the new tab, then navigate to the URL `https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/`.
+   1. In the Microsoft Edge's browser window, open the new tab, then navigate to the URL [`https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/`](https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/).
    2. Examine the API's response. The API should return a JSON response that contains a list of images. (Only one in this case)
 
    #### Task 2: Create a web app

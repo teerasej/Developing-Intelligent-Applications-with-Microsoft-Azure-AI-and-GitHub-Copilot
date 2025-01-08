@@ -72,38 +72,10 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 You're going to ground the prompts you use with a generative AI model by using your own data. In this exercise, the data consists of a collection of travel brochures from the fictional *Margies Travel* company.
 
-1. In a new browser tab, download an archive of brochure data from `https://aka.ms/own-data-brochures`. or in `Allfiles/Labs/03-ai-search` Extract the brochures to a folder on your PC.
+1. In a new browser tab, download an archive of brochure data from `https://aka.ms/own-data-brochures`. or in `Allfiles/Labs/04-use-own-data` Extract the brochures to a folder on your PC.
 1. In the Azure portal, navigate to your storage account and view the **Storage browser** page.
 1. Select **Blob containers** and then add a new container named `margies-travel`.
 1. Select the **margies-travel** container, and then upload the .pdf brochures you extracted previously to the root folder of the blob container.
-
-    > **Note**: The brochures are in PDF format, which is a common format for documents. Azure AI Search can extract text from PDFs, but it can also extract text from images in the PDFs. This is useful because many brochures contain images of text rather than text itself.
-
-## Create an index
-
-To make it easy to use your own data in a prompt, you'll index it using Azure AI Search. You'll use the text embedding mdoel you deployed previously during the indexing process to *vectorize* the text data (which results in each text token in the index being represented by numeric vectors - making it compatible with the way a generative AI model represents text)
-
-1. In the Azure portal, navigate to your Azure AI Search resource.
-1. On the **Overview** page, select **Import and vectorize data**.
-1. In the **Setup your data connection** page, select **Azure Blob Storage** and configure the data source with the following settings:
-    - **Subscription**: The Azure subscription in which you provisioned your storage account.
-    - **Blob storage account**: The storage account you created previously.
-    - **Blob container**: margies-travel
-    - **Blob folder**: *Leave blank*
-    - **Enable deletion tracking**: Unselected
-    - **Authenticate using managed identity**: Unselected
-1. On the **Vectorize your text** page, select the following settings:
-    - **Kind**: Azure OpenAI
-    - **Subscription**: The Azure subscription in which you provisioned your Azure OpenAI service.
-    - **Azure OpenAI Service**: Your Azure OpenAI Service resource
-    - **Model deployment**: text-embedding-ada-002
-    - **Authentication type**: API key
-    - **I acknowledge that connecting to an Azure OpenAI service will incur additional costs to my account**: Selected
-1. On the next page, do <u>not</u> select the option to vectorize images or extract data with AI skills.
-1. On the next page, enable semantic ranking and schedule the indexer to run once.
-1. On the final page, set the **Objects name prefix** to `margies-index` and then create the index.
-
-    > **Note**: The indexing process may take some time to complete. You can monitor its progress on the **Indexers** page for your Azure AI Search resource.
 
 ## Prepare to develop an app in Visual Studio Code
 

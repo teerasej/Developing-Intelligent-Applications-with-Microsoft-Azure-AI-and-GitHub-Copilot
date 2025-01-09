@@ -1,4 +1,4 @@
-# Lab 01: Build a web application on Azure platform 
+# Lab 02: Build a web application on Azure platform 
 
 ## Microsoft Azure user interface
 
@@ -61,21 +61,31 @@ Sign in to your Azure portal using the credentials provided.
    
    ![Create web app blade](./media/l01_create_web_app.png)
    
-   8.  On the **Monitoring** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
+   8.  On the **Deployment** tab, in the **Deployment source** section, select **Github**. then select **Authorize** to authorize the Azure portal to access your Github account.
+      
+   - Select the **Organization** that contains the repository.
+   - Select the **Repository** that contains the code. In this case, it is **azure-dotnet-imgweb-repo**.
+   - Select the **Branch** that contains the code. In this case, it is **main** branch.
+      
+      <img width="893" alt="2025-01-09_14-17-52" src="https://github.com/user-attachments/assets/af6da3d3-3a54-442f-b9c1-fb6e1e293e6b" />
+
+   9.  On the **Monitoring** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
+      <img width="868" alt="2025-01-09_14-19-19" src="https://github.com/user-attachments/assets/1736c2a5-81ff-4195-a667-99aa74841756" />
+
    
-   9.  From the **Review + create** tab, review the options that you selected during the previous steps.
+   10. From the **Review + create** tab, review the options that you selected during the previous steps.
    
-   10. Select **Create** to create the web app by using your specified configuration.
+   11. Select **Create** to create the web app by using your specified configuration.
    
    > **Note**: Wait for the creation task to complete before you continue with this lab.
    
-   11. On the **Overview** blade, select the **Go to resource** button to navigate to the blade of the newly created web app.
+   12. On the **Overview** blade, select the **Go to resource** button to navigate to the blade of the newly created web app.
    
    #### Task 2: Configure a web app
    
-   12. On the **App Service** blade, in the **Settings** section, select the **Environment variables** link.
+   13. On the **App Service** blade, in the **Settings** section, select the **Environment variables** link.
    
-   13. In the **Environment variables** section, perform the following actions, select **Save**, and then select **Continue**:
+   14. In the **Environment variables** section, perform the following actions, select **Save**, and then select **Continue**:
    
        | Setting | Action |
        |--|--|
@@ -89,72 +99,65 @@ Sign in to your Azure portal using the credentials provided.
    
    #### Task 3: Deploy an `ASP.NET` web application to Web Apps
    
-   14. On the taskbar, select the **Visual Studio Code** icon.
+   15. On the **App Service** blade, in the **Deployment** section, select the **Deployment Center** link. 
    
-   15. On the **File** menu, select **Open Folder**.
+   16. Open the **Settings** tab, validate your Github deployment settings.
    
-   16. In the **File Explorer** window, browse to **[Local repository directory]\\Allfiles\\Labs\\01\\Starter\\Web**, and then select **Select Folder**.
-   
-> **Note**: Ignore any prompts to add required assets to build and debug and to run the restore command to address unresolved dependencies.
-   
-   17. On the **Explorer** pane of the **Visual Studio Code** window, expand the **Pages** folder, and then select the **Index.cshtml.cs** file to open the file in the editor.
-   
-   18. In the editor, in the **IndexModel** class on line 30, observe the **OnGetAsync** method and the code used to retrieve the list of images from the API.
-   
-   19. In the **IndexModel** class on line 41, observe the **OnPostAsync** method and the code used to stream an uploaded image to the backend API.
-   
-   20. On the taskbar, select the **Terminal** icon.
-   
-   21. At the open terminal, enter the following command, and then select Enter to sign in to the Azure CLI:
-   
-   ```
-   az login
-   ```
-   
-   22. In the **Microsoft Edge** browser window, enter the email address and password for your Microsoft account, and then select **Sign in**.
-   
-   23. Return to the currently open **Terminal** window. Wait for the sign-in process to finish.
-   
-   24. Within the Visual Studio Code, Right-click on the **[Local repository directory]\\Allfiles\\Labs\\01\\Starter\\Web** 
+   17. Open the **Logs** tab, validate that the deployment is success
+      <img width="1093" alt="2025-01-09_14-33-25" src="https://github.com/user-attachments/assets/7ed1ad9d-cab7-4224-8c4d-e4ada63f3c33" />
 
-   25. Select "Open in integrated terminal" to change the current directory to the **[Local repository directory]\\Allfiles\\Labs\\01\\Starter\\Web** directory that contains the lab files.
-   
-   26. Enter the following command, and then select Enter to deploy the **web.zip** file to the web app that you created previously in this lab:
-   
-   ```
-   az webapp deploy --resource-group <your-resource-group-name> --src-path web.zip --type zip --name  <name-of-your-api-app>
-   ```
-   
-   > **Note**: Replace the *\<name-of-your-web-app\>* placeholder with the name of the web app and *\<your-resource-group-name\>* that you created previously in this lab. You recently noted this app’s name in the previous steps.
-   
-   Wait for the deployment to complete before you continue with this lab.
-   
-   27. On the Azure portal's **navigation** pane, select **Resource groups**.
-   
-   28. On the **Resource groups** blade, select the **_[yourname]_ManagedPlatform** resource group that you created previously in this lab.
-   
-   29. On the **ManagedPlatform** blade, select the **imgweb**_[yourname]_ web app that you created previously in this lab.
-   
-   30. On the **App Service** blade, select **Browse**.
-   
-   31. Observe the list of images in the gallery. The gallery should list a single image that was uploaded to Storage previously in the lab.
-   
-   32. In the **Contoso Photo Gallery** webpage, in the **Upload a new image** section, perform the following actions:
-   
-       1. Select **Browse**.
+   18. On the **App Service** blade, select the **Overview** link, then select the **Browse** link to open the web app in a new browser tab.
 
-       2. In the **File Explorer** window, browse to **[Local repository directory]\\Allfiles\\Labs\\01\\Starter\\Images**, select the **banhmi.jpg** file, and then select **Open**.
+   > **Note**: The web app should display the list of images from the API that you tested earlier in this lab. if not, try following instruction to solve the issue.
+   > 1. Use the **Restart** button to restart the web app.
+   > 2. Check the **Logs** tab to see if there is any error. then retry to deploy the web app again.
 
-       3. Select **Upload**.
-   
-   33. Observe that the list of gallery images has updated with your new image.
-   
-> **Note**: In some rare cases, you might need to refresh your browser window to retrieve the new image.
-   
-   34. Return to the browser window that contains the Azure portal.
-   
-   35. Close the currently running Visual Studio Code and Terminal applications.
-   
+### Exercise 2: Using Deployment Slots
+
+#### Task 1: Create a deployment slot
+
+1. On the **App Service** blade, in the **Deployment** section, select the **Deployment slots** link.
+2. Select **Add Slot**. 
+3. Fill in the following information:
+   - **Name**: Enter **staging**.
+   - **Clone settings from**: Select **imgweb**_[yourname]_.
+4. Wait for the deployment slot to be created.
+5. You will see 2 deployment slots in the **Deployment slots** section. One is the **Production** slot and the other is the **Staging** slot.
+   <img width="1152" alt="2025-01-09_14-48-04" src="https://github.com/user-attachments/assets/b46ce9ac-f61e-4537-8997-ef344ee80165" />
+
+#### Task 2: Deploy the web app to the staging slot
+
+1. From the deployment slot list, select the **Staging** slot.
+2. Please be noticed that the **Staging** slot is a separate web app. 
+3. On the **App Service** blade, in the **Deployment** section, select the **Deployment Center** link.
+4. Open the **Settings** tab, fill in the following information:
+   - **Source**: Select **Github**.
+   - In Github section, use same account, organization, repository, but select diferent branch
+   - **Workflow option**: select **Add a workflow**
+   - **Authentication Setting**: Select **basic authentication**.
+
+   > Leave the other settings as default.
+
+   <img width="1138" alt="2025-01-09_14-53-08" src="https://github.com/user-attachments/assets/48264920-9c48-42d0-b9e5-1610cb852db2" />
+
+5. Select **Save** to save the configuration.
+6. Open the **Logs** tab, validate that the deployment is success.
+7. Open the **Overview** tab, select the **Browse** link to open the web app in a new browser tab.
+
+> this should be another version of the web app, not the same as the production slot.
+
+#### Task 3: Swap the deployment slots
+
+1. Use the breadcrumb to navigate back to the **imgweb**_[yourname]_ web app.
+2. On the **App Service** blade, in the **Deployment** section, select the **Deployment slots** link.
+3. Select the **Swap** button.
+4. In the **Swap** blade, select **Swap** to swap the **Production** and **Staging** slots.
+
+   > **Note**: The swap operation might take a few minutes to complete.
+
+5. After the swap operation is complete, open the **Overview** link on the **App Service** blade, and then select the **Browse** link to open the web app in a new browser tab.
+6. Validate that the web app is now the same as the **Staging** slot.
+
 
 ### Remove the resources group
 

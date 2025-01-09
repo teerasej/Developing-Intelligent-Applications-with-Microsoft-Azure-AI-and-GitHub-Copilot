@@ -2,37 +2,34 @@
 # Github Copilot with .NET
 
 - Repository for this project: https://github.com/teerasej/azure-dotnet-imgweb-repo
-
-## 1. Activate your codespaces
+- ApiUrl
+```
+https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/
+```
 
 1. [Fork and create your Github codespace](./github-copilot-contents/activate-codespace.md)
+2. [Explore your workspace](./github-copilot-contents/explore-workspace.md)
 
-## 2. Explore your workspace 
 
-1. [Explore your workspace](./github-copilot-contents/explore-workspace.md)
+## 2. Triggering Github Copilot in the code
 
-## 2. Triggering Github Copilot
+> **Note:** Before you start following step, make sure you create a new branch so your **main** branch will survive.
 
 1. [Inline Suggestion](github-copilot-contents/inline-suggestion.md)
-2. [Explain the code with Command Palette](github-copilot-contents/explain-code.md)
-3. [Comment to code](github-copilot-contents/comment-to-code.md)
+2. [Inline chat](github-copilot-contents/inline-chat.md)
 
-## 3. Github copilot chat
+## 3. Copilot Edits 
 
-1. [Chat with Copilot (Create the new controller)](github-copilot-contents/chat-with-copilot.md)
+1. [Using Copilot Edit](github-copilot-contents/copilot-edit-1.md)
 
-## 4. Documenting Your Code
 
-1. [Documenting Your Code](github-copilot-contents/documenting-your-code.md)
+## 4. Generate Testing 
 
-## 5. Generate Testing 
-
-1. [Create a class from empty file](github-copilot-contents/create-class-from-empty-file.md)
-2. [Generate Unit test for the class](github-copilot-contents/generate-unit-test.md)
-3. [Generate Integration test for the class](github-copilot-contents/generate-integration-test.md)
+1. [Generate Unit test for the class](github-copilot-contents/generate-unit-test.md)
 
 
 ## Challenge 
 
-1. [Challenge 1: Service and Mocking](github-copilot-contents/challenge-service-and-mocking.md)
-2. **Challenge 2: Github Action Workflow:** try to create a `.yml` file for Github Action to build the project and run the test when push code to main branch in github repository.
+> **Note:** Before you start following step, make sure you create a new branch **v2**, then commit all changes to its.
+
+1. [Create an event registration page](github-copilot-contents/event-registration.md)

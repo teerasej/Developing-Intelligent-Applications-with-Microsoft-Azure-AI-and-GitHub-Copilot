@@ -31,8 +31,8 @@ In the scenario for this exercise, you will perform the role of a software devel
 To complete this exercise, you'll need:
 
 - An Azure OpenAI resource.
-- An Azure AI Search resource. (which we already created in the previous lab)
-- An Azure Storage Account resource. (which we already created in the previous lab)
+- An Azure AI Search resource.
+- An Azure Storage Account resource.
 
 1. Sign into the **Azure portal** at `https://portal.azure.com`.
 2. Create an **Azure OpenAI** resource with the following settings:
@@ -54,8 +54,22 @@ To complete this exercise, you'll need:
 
     > \* Azure OpenAI resources are constrained by regional quotas. The listed regions include default quota for the model type(s) used in this exercise. Randomly choosing a region reduces the risk of a single region reaching its quota limit in scenarios where you are sharing a subscription with other users. In the event of a quota limit being reached later in the exercise, there's a possibility you may need to create another resource in a different region.
 
+3. While the Azure OpenAI resource is being provisioned, create an **Azure AI Search** resource with the following settings:
+    - **Subscription**: *The subscription in which you provisioned your Azure OpenAI resource*
+    - **Resource group**: *The resource group in which you provisioned your Azure OpenAI resource*
+    - **Service name**: *A unique name of your choice*
+    - **Location**: *The region in which you provisioned your Azure OpenAI resource*
+    - **Pricing tier**: Basic
+4. While the Azure AI Search resource is being provisioned, create a **Storage account** resource with the following settings:
+    - **Subscription**: *The subscription in which you provisioned your Azure OpenAI resource*
+    - **Resource group**: *The resource group in which you provisioned your Azure OpenAI resource*
+    - **Storage account name**: *A unique name of your choice*
+    - **Region**: *The region in which you provisioned your Azure OpenAI resource*
+    - **Performance**: Standard
+    - **Redundancy**: Locally redundant storage (LRS)
 
-3. After all three of the resources have been successfully deployed in your Azure subscription, review them in the Azure portal and gather the following information (which you'll need later in the exercise):
+
+5. After all three of the resources have been successfully deployed in your Azure subscription, review them in the Azure portal and gather the following information (which you'll need later in the exercise):
     - **Azure OpenAI resource**: The  **endpoint** and a **key** from the Azure OpenAI resource you created (available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
     - **Azure AI Search service**: 
       - The **endpoint (Url)** for your Azure AI Search service (the **Url** value on the overview page for your Azure AI Search resource in the Azure portal).
@@ -81,8 +95,6 @@ To deploy these models, you'll use AI Foundry.
 
 1. In the Azure portal, navigate to your Azure OpenAI resource. Then use the link to open your resource in **Azure AI Foundry portal**..
 1. In Azure AI Foundry portal, on the **Deployments** page, view your existing model deployments. Then create a new base model deployment of the **text-embedding-ada-002** model with the following settings:
-
-    > You can use text-embedding-ada-003, if the 002 version is not available.
 
     - **Deployment name**: text-embedding-ada-002
     - **Model**: text-embedding-ada-002

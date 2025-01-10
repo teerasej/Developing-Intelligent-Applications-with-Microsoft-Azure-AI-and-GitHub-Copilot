@@ -79,7 +79,7 @@ To complete this exercise, you'll need:
 
 You're going to ground the prompts you use with a generative AI model by using your own data. In this exercise, the data consists of a collection of travel brochures from the fictional *Margies Travel* company.
 
-1. In a new browser tab, download an archive of brochure data from `https://aka.ms/own-data-brochures`. or in `Allfiles/Labs/04-use-own-data` Extract the brochures to a folder on your PC.
+1. In a new browser tab, download an archive of brochure data from [https://aka.ms/own-data-brochures](https://aka.ms/own-data-brochures). or in `Allfiles/Labs/04-use-own-data` Extract the brochures to a folder on your PC.
 1. In the Azure portal, navigate to your storage account and view the **Storage browser** page.
 1. Select **Blob containers** and then add a new container named `margies-travel`.
 1. Select the **margies-travel** container, and then upload the .pdf brochures you extracted previously to the root folder of the blob container.

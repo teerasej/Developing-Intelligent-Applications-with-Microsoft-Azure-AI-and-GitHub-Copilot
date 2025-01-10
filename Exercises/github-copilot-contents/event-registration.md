@@ -1,15 +1,14 @@
-
-# Create version 2 
+# Create version 2: Add Event Registration
 
 1. Create a new branch `v2` from the main branch.
 2. Open the project in Visual Studio Code.
-3. Open Github Copilot Chat with new chat
+3. Open GitHub Copilot Chat with a new chat.
 4. Prompt the following message to the chat:
    ```
-   add an event registration page which require email and full name to this project, also update the main page to have a link to the event registration page
-    ```
-5. Copilot may suggest the different result, but after all try to use the `Copilot Edit` button at the end of result.
-6. You might see the Copilot Edit try to create files, fill in the code, you can adjust, accept or reject the code.
+   Add an event registration page which requires email and full name to this project, also update the main page to have a link to the event registration page.
+   ```
+5. Copilot may suggest different results, but after all, try to use the `Copilot Edit` button at the end of the result.
+6. You might see Copilot Edit try to create files, fill in the code; you can adjust, accept, or reject the code.
 7. After you finish the code, you can commit the changes to the `v2` branch.
 
 

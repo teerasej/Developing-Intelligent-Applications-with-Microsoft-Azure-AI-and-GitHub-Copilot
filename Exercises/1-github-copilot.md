@@ -8,7 +8,7 @@ https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/
 ```
 
 1. [Fork and create your GitHub codespace](./github-copilot-contents/activate-codespace.md)
-2. [Explore your workspace](./github-copilot-contents/explore-workspace.md)
+2. [Explore your workspace](./github-copilot-contents/explore-workspace.md), [Sign up](https://github.com/github-copilot/workspace_waitlist_signup/join)
 
 ## 2. Triggering GitHub Copilot in the code
 

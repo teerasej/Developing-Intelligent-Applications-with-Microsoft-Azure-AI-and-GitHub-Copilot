@@ -1,6 +1,7 @@
 # GitHub Copilot with .NET
 
 - Repository for this project: https://github.com/teerasej/azure-dotnet-imgweb-repo
+- github copilot workspace: https://copilot-workspace.githubnext.com/
 - ApiUrl
 ```
 https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/

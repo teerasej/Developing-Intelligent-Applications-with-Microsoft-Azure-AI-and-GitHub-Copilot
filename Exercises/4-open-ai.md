@@ -34,7 +34,7 @@ To complete this exercise, you'll need:
 - An Azure AI Search resource.
 - An Azure Storage Account resource.
 
-1. Sign into the **Azure portal** at `https://portal.azure.com`.
+1. Sign into the **Azure portal** at [https://portal.azure.com](https://portal.azure.com).
 2. Create an **Azure OpenAI** resource with the following settings:
     - **Subscription**: *Select an Azure subscription that has been approved for access to the Azure OpenAI service*
     - **Resource group**: *Choose or create a resource group*

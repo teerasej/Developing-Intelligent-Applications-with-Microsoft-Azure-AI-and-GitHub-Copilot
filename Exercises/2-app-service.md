@@ -30,7 +30,7 @@ Sign in to your Azure portal using the credentials provided.
    
    #### Task 1: Test the Web API
 
-   1. In the Microsoft Edge's browser window, open the new tab, then navigate to the URL [`https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/`](https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/).
+   1. In the Microsoft Edge's browser window, open the new tab, then [navigate to the URL which represents the web API that you will use in this lab](webapi.md).
    2. Examine the API's response. The API should return a JSON response that contains a list of images. (Only one in this case)
 
    #### Task 2: Create a web app
@@ -69,29 +69,29 @@ Sign in to your Azure portal using the credentials provided.
       
       <img width="893" alt="2025-01-09_14-17-52" src="https://github.com/user-attachments/assets/af6da3d3-3a54-442f-b9c1-fb6e1e293e6b" />
 
-   9.  On the **Monitoring** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
+   1.  On the **Monitoring** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
       <img width="868" alt="2025-01-09_14-19-19" src="https://github.com/user-attachments/assets/1736c2a5-81ff-4195-a667-99aa74841756" />
 
    
-   10. From the **Review + create** tab, review the options that you selected during the previous steps.
+   2.  From the **Review + create** tab, review the options that you selected during the previous steps.
    
-   11. Select **Create** to create the web app by using your specified configuration.
+   3.  Select **Create** to create the web app by using your specified configuration.
    
    > **Note**: Wait for the creation task to complete before you continue with this lab.
    
-   12. On the **Overview** blade, select the **Go to resource** button to navigate to the blade of the newly created web app.
+   4.  On the **Overview** blade, select the **Go to resource** button to navigate to the blade of the newly created web app.
    
    #### Task 2: Configure a web app
    
-   13. On the **App Service** blade, in the **Settings** section, select the **Environment variables** link.
+   5.  On the **App Service** blade, in the **Settings** section, select the **Environment variables** link.
    
-   14. In the **Environment variables** section, perform the following actions, select **Save**, and then select **Continue**:
+   6.  In the **Environment variables** section, perform the following actions, select **Save**, and then select **Continue**:
    
        | Setting | Action |
        |--|--|
        | **App settings** tab | Select **New application setting** |
        | **Add/Edit application setting** pop-up dialog | In the **Name** text box, enter **ApiUrl** |
-       | **Value** text box | Enter the web app URL `https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/` |
+       | **Value** text box | Enter [the web api URL from this link](webapi.md)  |
        | **Deployment slot setting** check box | Retain the default value, and then select **OK** |
        | Click **Save** in the  top menu | This will save the configuration value you just entered |
    
@@ -99,14 +99,14 @@ Sign in to your Azure portal using the credentials provided.
    
    #### Task 3: Deploy an `ASP.NET` web application to Web Apps
    
-   15. On the **App Service** blade, in the **Deployment** section, select the **Deployment Center** link. 
+   7.  On the **App Service** blade, in the **Deployment** section, select the **Deployment Center** link. 
    
-   16. Open the **Settings** tab, validate your Github deployment settings.
+   8.  Open the **Settings** tab, validate your Github deployment settings.
    
-   17. Open the **Logs** tab, validate that the deployment is success
+   9.  Open the **Logs** tab, validate that the deployment is success
       <img width="1093" alt="2025-01-09_14-33-25" src="https://github.com/user-attachments/assets/7ed1ad9d-cab7-4224-8c4d-e4ada63f3c33" />
 
-   18. On the **App Service** blade, select the **Overview** link, then select the **Browse** link to open the web app in a new browser tab.
+   10. On the **App Service** blade, select the **Overview** link, then select the **Browse** link to open the web app in a new browser tab.
 
    > **Note**: The web app should display the list of images from the API that you tested earlier in this lab. if not, try following instruction to solve the issue.
    > 1. Use the **Restart** button to restart the web app.

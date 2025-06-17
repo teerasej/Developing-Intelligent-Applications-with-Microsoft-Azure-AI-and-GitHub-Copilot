@@ -125,39 +125,6 @@ Sign in to your Azure portal using the credentials provided.
 5. You will see 2 deployment slots in the **Deployment slots** section. One is the **Production** slot and the other is the **Staging** slot.
    <img width="1152" alt="2025-01-09_14-48-04" src="https://github.com/user-attachments/assets/b46ce9ac-f61e-4537-8997-ef344ee80165" />
 
-#### Task 2: Deploy the web app to the staging slot
-
-1. From the deployment slot list, select the **Staging** slot.
-2. Please be noticed that the **Staging** slot is a separate web app. 
-3. On the **App Service** blade, in the **Deployment** section, select the **Deployment Center** link.
-4. Open the **Settings** tab, fill in the following information:
-   - **Source**: Select **Github**.
-   - In Github section, use same account, organization, repository, but select diferent branch
-   - **Workflow option**: select **Add a workflow**
-   - **Authentication Setting**: Select **basic authentication**.
-
-   > Leave the other settings as default.
-
-   <img width="1138" alt="2025-01-09_14-53-08" src="https://github.com/user-attachments/assets/48264920-9c48-42d0-b9e5-1610cb852db2" />
-
-5. Select **Save** to save the configuration.
-6. Open the **Logs** tab, validate that the deployment is success.
-7. Open the **Overview** tab, select the **Browse** link to open the web app in a new browser tab.
-
-> this should be another version of the web app, not the same as the production slot.
-
-#### Task 3: Swap the deployment slots
-
-1. Use the breadcrumb to navigate back to the **imgweb**_[yourname]_ web app.
-2. On the **App Service** blade, in the **Deployment** section, select the **Deployment slots** link.
-3. Select the **Swap** button.
-4. In the **Swap** blade, select **Swap** to swap the **Production** and **Staging** slots.
-
-   > **Note**: The swap operation might take a few minutes to complete.
-
-5. After the swap operation is complete, open the **Overview** link on the **App Service** blade, and then select the **Browse** link to open the web app in a new browser tab.
-6. Validate that the web app is now the same as the **Staging** slot.
-
 
 ### Remove the resources group
 

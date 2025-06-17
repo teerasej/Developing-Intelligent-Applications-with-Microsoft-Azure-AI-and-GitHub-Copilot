@@ -13,10 +13,10 @@ Install following software on your local machine:
 
 1. [.NET SDK 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 2. [Git](https://git-scm.com/)
-   1. Run the git config command to configure your user name and email address:
+   1. Run the git config command to configure your user name and email address (Used as github account):
    ```
    git config --global user.name "Your Name"
-   git config --global user.email "<your email account>"
+   git config --global user.email "your email account"
    ```
 3. [Visual Studio Code](https://code.visualstudio.com/)
    1. [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)

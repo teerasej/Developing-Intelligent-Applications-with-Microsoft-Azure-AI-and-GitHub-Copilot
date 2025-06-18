@@ -109,7 +109,7 @@ To deploy these models, you'll use AI Foundry.
 
     > \* A rate limit of 5,000 tokens per minute is more than adequate to complete this exercise while leaving capacity for other people using the same subscription.
 
-## 4. Create an index
+## 4. Create a Vector index
 
 To make it easy to use your own data in a prompt, you'll index it using Azure AI Search. You'll use the text embedding mdoel you deployed previously during the indexing process to *vectorize* the text data (which results in each text token in the index being represented by numeric vectors - making it compatible with the way a generative AI model represents text)
 

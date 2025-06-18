@@ -29,3 +29,7 @@ https://imgapi-nextflow-eyh5a5fmgmavd9as.eastus-01.azurewebsites.net/
 > **Note:** Before you start following the steps, make sure you create a new branch **v2**, then commit all changes to it.
 
 1. [Create an event registration page](github-copilot-contents/event-registration.md)
+
+## Reference 
+
+- [Github Copilot (Microsoft Learn)](https://learn.microsoft.com/en-us/training/courses/gh-300t00)

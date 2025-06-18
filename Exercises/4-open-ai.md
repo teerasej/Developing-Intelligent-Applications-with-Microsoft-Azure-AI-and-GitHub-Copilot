@@ -244,3 +244,7 @@ Now that your app has been configured, run it to send your request to your model
 ## Clean up
 
 When you're done with your Azure OpenAI resource, remember to delete the resources in the **Azure portal** at `https://portal.azure.com`. Be sure to also include the storage account and search resource, as those can incur a relatively large cost.
+
+## References
+
+- [Develop generative AI apps in Azure](https://learn.microsoft.com/en-us/training/paths/create-custom-copilots-ai-studio/)

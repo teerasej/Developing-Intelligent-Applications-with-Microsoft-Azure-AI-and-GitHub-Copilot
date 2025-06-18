@@ -168,3 +168,6 @@ Sign in to your Azure portal using the credentials provided.
 ## Review
 
 In this exercise, you created an Azure web app and deployed an existing web application’s code to the resource in the cloud.
+
+## References
+- [Implement Azure App Service web apps](https://learn.microsoft.com/en-us/training/paths/create-azure-app-service-web-apps/)

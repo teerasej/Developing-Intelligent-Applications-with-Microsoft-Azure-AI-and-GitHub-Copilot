@@ -202,4 +202,4 @@ Now that you've completed the exercise, delete all the resources you no longer n
 
 ## More information
 
-To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
+To learn more about Azure AI Search, see the [Create a knowledge mining solution with Azure AI Search](https://learn.microsoft.com/en-us/training/modules/ai-knowldge-mining/).

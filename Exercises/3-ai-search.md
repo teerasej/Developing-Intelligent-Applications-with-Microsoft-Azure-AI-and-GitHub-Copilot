@@ -16,17 +16,17 @@ For example, suppose *Margie's Travel* is a travel agency that specializes in or
 
 To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
 
-## Create Azure resources
+## 1. Create Azure resources
 
 The solution you will create for Margie's Travel requires the following resources in your Azure subscription:
 
-- An **Azure AI Search** resource, which will manage indexing and querying.
-- An **Azure AI Services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
-- A **Storage account** with a blob container in which the documents to be searched are stored.
+1. An **Azure AI Search** resource, which will manage indexing and querying.
+2. An **Azure AI Services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
+3. A **Storage account** with a blob container in which the documents to be searched are stored.
 
 > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location!
 
-### Create an Azure AI Search resource
+### 1.1. Create an Azure AI Search resource
 
 1. In a web browser, open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 2. Select the **Create a resource** button, search for *search*, and create an **Azure AI Search** resource with the following settings:
@@ -34,12 +34,12 @@ The solution you will create for Margie's Travel requires the following resource
     - **Resource group**: *Create a new resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided)*
     - **Service name**: *Enter a unique name*
     - **Location**: *Select a location - note that your Azure AI Search and Azure AI Services resources must be in the same location*
-    - **Pricing tier**: Free F1
+    - **Pricing tier**: Basic or Standard
 
 3. Wait for deployment to complete, and then go to the deployed resource.
 4. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
-### Create an Azure AI Services resource
+### 1.2 Create an Azure AI Services resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
 
@@ -52,7 +52,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 2. Select the required checkboxes and create the resource.
 3. Wait for deployment to complete, and then view the deployment details.
 
-### Create a storage account
+### 1.3 Create a storage account
 
 1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
@@ -68,7 +68,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
 
-## Upload your data
+## 2. Upload your data
 
 You're going to ground the prompts you use with a generative AI model by using your own data. In this exercise, the data consists of a collection of travel brochures from the fictional *Margies Travel* company.
 
@@ -78,7 +78,7 @@ You're going to ground the prompts you use with a generative AI model by using y
 1. Select the **margies-travel** container, and then upload the .pdf brochures you extracted previously to the root folder of the blob container.
 
 
-## Index the documents
+## 3. Index the documents
 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
@@ -140,7 +140,7 @@ Now that you have the documents in place, you can create a search solution by in
     3. Maps the extracted fields to the index.
 15. On the left side, view the **Indexers** page, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 
-## Search the index
+## 4. Search the index
 
 Now that you have an index, you can search it.
 
@@ -193,7 +193,7 @@ Now that you have an index, you can search it.
     This search finds documents that mention "New York" in any of the searchable fields, and returns the file name and key phrases in the document.
 
 
-## Clean-up
+## 5. Clean-up
 
 Now that you've completed the exercise, delete all the resources you no longer need. Delete the Azure resources:
 

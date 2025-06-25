@@ -133,7 +133,7 @@ To make it easy to use your own data in a prompt, you'll index it using Azure AI
 1. On the next page, enable semantic ranking and schedule the indexer to run once.
 1. On the final page, set the **Objects name prefix** to `margies-index` and then create the index.
 
-## 4. Prepare to develop an app in Visual Studio Code
+## 4. (Optional) Prepare to develop an app in Visual Studio Code
 
 Now let's explore the use of your own data in an app that uses the Azure OpenAI service SDK. You'll develop your app using Visual Studio Code. The code files for your app have been provided in a GitHub repo.
 
